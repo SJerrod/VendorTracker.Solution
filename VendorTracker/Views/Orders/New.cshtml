@@ -1,0 +1,11 @@
+<h1>New Order for @Model.Name</h1>
+
+<form action="/vendors/@Model.Id/orders" method="post">
+  <input id="orderId" name="orderId" type="hidden" value="@Model.Id">
+  <input id="orderTitle" name="orderTitle" placeholder="Enter Order Name" type="text">
+  <input id="orderDescription" name="orderDescription" placeholder="Description for order" type="text">
+  <input id="orderPrice" name="orderPrice" placeholder="Order Total" type="text">
+  <label for="orderDate">Orders Date</label>
+  <input id="orderDate" type="date">
+  <button type="submit">Add New Order</button>
+</form>
