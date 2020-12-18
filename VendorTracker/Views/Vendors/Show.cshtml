@@ -1,0 +1,19 @@
+@using VendorTracker.Models;
+
+<h3>@Model["vendor"].Name current Orders.</h3>
+
+@* @if (@Model["order"].Count == 0)
+{
+  <h3>No categories have been added yet!</h3>
+} *@
+
+<ol>
+  @foreach (Order order in @Model["orders"])
+  {
+    <li><a href="/vendors/@Model["vendor"].Id/orders/@order.Id">@order.Title</a></li>
+  }
+</ol>
+
+<p><a href="/vendors/@Model["vendor"].Id/orders/new">Start New Order.</a></p>
+<p><a href="/vendors">Navigate back to Vendors List.</a></p>
+<p><a href="/">Navigate back to Home.</a></p>

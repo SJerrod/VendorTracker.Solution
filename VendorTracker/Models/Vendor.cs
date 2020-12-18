@@ -18,5 +18,20 @@ namespace VendorTracker.Models
       Id = _instances.Count;
       Orders = new List<Order>{};
     }
+
+    public static List<Vendor> GetAll()
+    {
+      return _instances;
+    }
+
+    public static Vendor Find(int vendorId)
+    {
+      return _instances[vendorId-1];
+    }
+    
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
+    }
   }
 }
