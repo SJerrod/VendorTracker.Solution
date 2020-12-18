@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System;
 
 namespace VendorTracker.Models
 {
@@ -7,16 +8,16 @@ namespace VendorTracker.Models
     public string Title { get; set; }
     public string Description { get; set; }
     public string Price { get; set; }
-    //public DateTime Date { get; set; }
+    public DateTime Date { get; }
     public int Id { get; }
     private static List<Order> _instances = new List<Order> {};
 
-    public Order (string orderTitle, string orderDescription, string orderPrice)
+    public Order (string orderTitle, string orderDescription, string orderPrice, DateTime orderDate)
     {
       Title = orderTitle;
       Description = orderDescription;
       Price = orderPrice;
-      //Date = orderDate;
+      Date = orderDate;
       _instances.Add(this);
       Id = _instances.Count;
     }
