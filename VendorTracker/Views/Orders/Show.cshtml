@@ -1,11 +1,11 @@
 <h1>Order Details</h1>
 
 <h2>Vendor: @Model["vendor"].Name</h2>
-<h3>Order: @Model["order"].Title</h3>
+<h3>Order Title: @Model["order"].Title</h3>
 
 <p>Description: @Model["order"].Description</p>
-<p>Order Total: @Model["order"].Price</p>
-<p>Date Ordered: @Model["order"].Date</p>
+<p>Total Cost of Order: @Model["order"].Price</p>
+@* <p>Date Ordered: @Model["order"].Date</p> *@
 
 <p><a href="/vendors/@Model["vendor"].Id">Back to @Model["vendor"].Name Order List</a></p>
 <p><a href="/vendors">Navigate back to Vendors List.</a></p>

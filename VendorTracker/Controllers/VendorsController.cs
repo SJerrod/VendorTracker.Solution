@@ -9,7 +9,7 @@ namespace VendorTracker.Controllers
     [HttpGet("/vendors")]
     public ActionResult Index()
     {
-      List<Vendor> allVendors = VendorsController.GetAll();
+      List<Vendor> allVendors = Vendor.GetAll();
       return View(allVendors);
     }
 
@@ -30,7 +30,7 @@ namespace VendorTracker.Controllers
     public ActionResult Show(int id)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
-      Vendor selectedVendor = VendorsController.Find(id);
+      Vendor selectedVendor = Vendor.Find(id);
       List<Order> vendorOrders = selectedVendor.Orders;
       
       model.Add("vendor", selectedVendor);
@@ -40,11 +40,11 @@ namespace VendorTracker.Controllers
     }
 
     [HttpPost("/vendors/{vendorId}/orders")]
-    public ActionResult Create(int vendorId, string orderTitle)
+    public ActionResult Create(int vendorId, string orderTitle, string orderDescription, string orderPrice)
     {
       Dictionary<string, object> model = new Dictionary<string, object>();
-      Vendor foundVendor = VendorsController.Find(vendorId);
-      Order newOrder = new Order(orderTitle);
+      Vendor foundVendor = Vendor.Find(vendorId);
+      Order newOrder = new Order(orderTitle, orderDescription, orderPrice);
       foundVendor.AddOrder(newOrder);
       List<Order> vendorOrders = foundVendor.Orders;
 
