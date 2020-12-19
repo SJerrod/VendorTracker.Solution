@@ -29,10 +29,10 @@ namespace VendorTracker.Models
       return _instances[vendorId-1];
     }
     
-    // public void AddOrder(Order order)
-    // {
-    //   Orders.Add(order);
-    // }
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
+    }
 
     public static void ClearAll()
     {
