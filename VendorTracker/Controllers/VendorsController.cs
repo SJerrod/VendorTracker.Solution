@@ -54,5 +54,12 @@ namespace VendorTracker.Controllers
 
       return View("Show", model);
     }
+
+    // [HttpDelete("/orders/delete")]
+    // public ActionResult DeleteAll()
+    // {
+    //   Order.ClearAll();
+    //   return RedirectToAction("Index");
+    // }
   }
 }
