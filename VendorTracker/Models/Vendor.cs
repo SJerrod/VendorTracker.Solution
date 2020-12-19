@@ -24,10 +24,10 @@ namespace VendorTracker.Models
       return _instances;
     }
 
-    public static Vendor Find(int vendorId)
-    {
-      return _instances[vendorId-1];
-    }
+    // public static Vendor Find(int vendorId)
+    // {
+    //   return _instances[vendorId-1];
+    // }
     
     public void AddOrder(Order order)
     {
