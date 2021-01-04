@@ -35,7 +35,7 @@ namespace VendorTracker.Tests
     }
 
     [TestMethod]
-    public void GetVendorsList_ShowsAllVendorObjects_VendorList()
+    public void GetAll_ShowsAllVendorObjects_VendorList()
     {
       string vendor1 = "Jessies Cafe";
       string vendor2 = "Dougs Doughnuts";
@@ -47,7 +47,7 @@ namespace VendorTracker.Tests
     }
 
     [TestMethod]
-    public void FindVendor_ReturnVendorById_Vendor()
+    public void Find_ReturnVendorById_Vendor()
     {
       string vendor1 = "Jessies Cafe";
       string vendor2 = "Dougs Doughnuts";

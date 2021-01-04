@@ -22,7 +22,10 @@
 - In the terminal run command 'cd VendorTracker'
 - In the terminal run command 'dotnet restore'
 - In the terminal run command 'dotnet build'
+- To run the program from this folder '*filelocation*/VendorTracker.Solution/VendorTracker'
 - In the terminal run command 'dotnet run'
+- To run tests be in this folder '*filelocation*/VendorTracker.Solution/VendorTracker.Tests'
+- In the terminal run command 'dotnet test'
 
 ## Specifications
 
